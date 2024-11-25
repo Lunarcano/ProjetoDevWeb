@@ -602,7 +602,7 @@ body {
 }
 
 .btn {
-<<<<<<< HEAD
+
     cursor: pointer;
     align-items: center;
     display: flex;
@@ -619,7 +619,7 @@ body {
     border: 2px solid #20ff7f;
     border-radius: 5px;
     justify-content: center;
-=======
+
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -629,12 +629,12 @@ body {
     border: 2px solid #e0e0e0; 
     border-radius: 5px;
     text-align: center;
->>>>>>> 1628456153f94c8144fd530e70d093996160e00e
+
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-<<<<<<< HEAD
+
     background-color: #20ff7f; 
     color: #000;
 }
@@ -692,10 +692,6 @@ body {
 .janela-modal.abrir {
     display: flex;
 }
-=======
-    background-color: #333333; 
-    color: #fff; 
-}
 
 .main-footer {
     background-color: #1f1f1f;
@@ -730,4 +726,4 @@ body {
     color: #bbb; 
 }
 
->>>>>>> 1628456153f94c8144fd530e70d093996160e00e
+
