@@ -1,0 +1,496 @@
+
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+    
+}
+
+/* Definição das cores */
+body {
+    /* Cores de Texto */
+    --text-white: #e0e0e0;
+    --text-dark: #111111;
+    --text-green: #32CD32;
+    --text-purple: #9400D3;
+  
+    /* Cores de Fundo */
+    --bg-black: #222;
+    --bg-grey: #1a1a1a;
+    --bg-light-grey: #313131;
+    --bg-white: #e0e0e0;
+    
+    /* Definindo as cores de fundo e de texto padrões */
+    background-color: var(--bg-grey); /* Preto para o fundo */
+    color: var(--text-white); /* Texto principal em cinza claro */
+  }
+
+  /* Alteração das cores no modo claro */
+.light {
+    --text-white: #0f0f0f;
+    --text-dark: #e0e0e0;
+    --text-green: #32CD32;
+    --text-purple: #9400D3;
+    --bg-black: #ffffff;
+    --bg-grey: #e7e7e7;
+    --bg-light-grey: #dbdbdb;
+    --bg-white: #e0e0e0;
+}
+
+
+button{
+    background-color: inherit;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+  }
+
+
+
+/* Banners Rotativos */
+.slider{
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 800px;
+    height: 200px;
+    overflow: hidden;
+    
+}
+
+.slides{
+    width: 400%;
+    height: 200px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide{
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img{
+    width: 800px;
+    
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -75%;
+}
+
+.navigation-auto div{
+    border: 2px solid #20adff;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 160px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: #fff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: #fff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: #fff;
+}
+
+/* Seções de Artigos Recentes e Destaque */
+.recentes, .destaque {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.recentes h2, .destaque h2 {
+    color: var(--text-green);
+    margin-bottom: 15px;
+}
+
+.recentes h3, .recentes p {
+    color: var(--text-white)
+}
+
+.artigo-destaque h3, .artigo-destaque p{
+    color: var(--text-white)
+}
+.artigo, .artigo-destaque {
+    background-color: var(--bg-black);
+    color: var(--text-dark);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.artigo a, .artigo-destaque a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.artigo:hover, .artigo-destaque:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px var(--text-green);
+}
+
+/* Estilo do Rodapé */
+.footer {
+    background-color: var(--bg-grey);
+    color: var(--bg-white);
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h3 {
+    color: var(--text-green); /* Verde para títulos */
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    color: var(--text-white);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--text-purple); /* Roxo no hover */
+}
+
+.social-link {
+    display: inline-block;
+    color: var(--text-green); /* Verde para links de redes sociais */
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: var(--text-purple); /* Roxo no hover */
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid var(--text-green);
+    margin-top: 20px;
+    color: var(--text-white);
+}
+
+
+.noticias {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.noticia {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--bg-black);
+    border-radius: 8px;
+}
+
+.noticia h3 {
+    color: var(--text-green); /* Verde */
+    margin-bottom: 8px;
+}
+
+.noticia p {
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.noticia a {
+    color: var(--text-purple); /* Roxo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.noticia a:hover {
+    color: var(--text-green); /* Verde no hover */
+}
+
+
+/* Cabeçalho */
+header {
+    background-color: var(--bg-grey); /* Fundo escuro para cabeçalho */
+    color: var(--text-white);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo h1 {
+    color: var(--text-green); /* Verde para o logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--text-purple); /* Roxo no hover */
+}
+
+/* Seção de Reviews */
+.reviews {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.reviews h2 {
+    text-align: center;
+    color: var(--text-green); /* Verde para o título principal */
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+.review {
+    background-color: var(--bg-black); /* Fundo mais escuro para cada review */
+    border: 1px solid var(--text-green); /* Borda verde */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review:hover {
+    transform: scale(1.02); /* Leve aumento no hover */
+    box-shadow: 0 0 10px var(--text-green); /* Sombra verde */
+}
+
+.review h3 {
+    color: var(--text-purple); /* Roxo para os títulos das reviews */
+    margin-bottom: 10px;
+}
+
+.review p {
+    color: var(--text-white); /* Texto claro */
+    margin-bottom: 15px;
+}
+
+.review a {
+    color: var(--text-green); /* Verde para o link "Leia Mais" */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.review a:hover {
+    color: var(--text-purple); /* Roxo no hover do link */
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--bg-grey);
+    color: var(--text-white);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+header {
+    background-color: var(--bg-black);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: var(--text-green);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--text-purple); /* Roxo ao passar o mouse */
+}
+
+/*Formulário de contato */
+.contact-form{
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: var(--bg-black);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(50, 205, 50, 0.5); /* Verde translúcido */
+}
+
+.contact-form h2 {
+    color: var(--text-green);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-green);
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: var(--bg-light-grey);
+    color: var(--text-white);
+    border: 1px solid var(--bg-black);
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.contact-form button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--text-green);
+    color: var(--text-dark);
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: var(--text-purple);
+    color: var(--text-white);
+}
+
+/* Comentários */
+#comentarios {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: var(--bg-light-grey);
+    border-radius: 8px;
+    color: var(--text-white);
+    font-style: italic;
+}
+
+/* Rodapé contato */
+footer {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
