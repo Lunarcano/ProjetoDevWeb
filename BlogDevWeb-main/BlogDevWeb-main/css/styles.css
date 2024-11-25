@@ -361,7 +361,6 @@ header nav ul li a:hover {
 
 .review {
     background-color: var(--bg-black); /* Fundo mais escuro para cada review */
-    border: 1px solid var(--text-green); /* Borda verde */
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
