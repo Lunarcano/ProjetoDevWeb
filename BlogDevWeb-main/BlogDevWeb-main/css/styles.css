@@ -1,3 +1,5 @@
+/* Fontes */
+
 
 /* Estilos gerais */
 * {
@@ -5,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     
-    font-family: "Inter", sans-serif;
+    font-family: "Ubuntu", sans-serif;
     line-height: 1.7;
     
 }
@@ -20,6 +22,7 @@ body {
   
     /* Cores de Fundo */
     --bg-black: #222;
+    --bg-green: #20ff7f;
     --bg-grey: #1a1a1a;
     --bg-light-grey: #313131;
     --bg-white: #e0e0e0;
@@ -37,6 +40,7 @@ body {
     --text-purple: #9400D3;
     --bg-black: #ffffff;
     --bg-grey: #e7e7e7;
+    --bg-green: #20ff7f;
     --bg-light-grey: #dbdbdb;
     --bg-white: #e0e0e0;
 }
@@ -492,35 +496,17 @@ nav ul li a:hover {
     font-style: italic;
 }
 
-/* Rodapé contato */
-footer {
-    background-color: var(--bg-black);
-    color: var(--text-white);
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-}
 
-/*reviews*/
 
-/* Estilos gerais */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #121212; 
-    color: #e0e0e0; 
-    margin: 0;
-    padding: 0;
-}
 
 
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1f1f1f;
+    background-color: var(--bg-black);
     padding: 20px;
-    border-bottom: 3px solid #333; 
+    border-bottom: 3px solid var(--bg-black); 
 }
 
 .main-header .logo {
@@ -531,7 +517,7 @@ body {
 
 .main-header h1 {
     font-size: 24px;
-    color: #e0e0e0; 
+    color: var(--text-white); 
 }
 
 .main-header img {
@@ -551,13 +537,13 @@ body {
 
 .main-header nav ul li a {
     text-decoration: none;
-    color: #e0e0e0;
+    color: var(--text-white);
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .main-header nav ul li a:hover {
-    color: #bbb; 
+    color: var(--text-white); 
 }
 
 
@@ -565,14 +551,14 @@ body {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #1f1f1f;
+    background-color: var(--bg-black);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(5, 251, 99, 0.2);
 }
 
 .review-header h1 {
     font-size: 32px;
-    color: #e0e0e0; 
+    color: var(--text-white); 
     text-align: center;
 }
 
@@ -586,7 +572,7 @@ body {
 
 .review-body h2 {
     font-size: 24px;
-    color: #e0e0e0; 
+    color: var(--text-white); 
     margin-bottom: 10px;
 }
 
@@ -602,41 +588,23 @@ body {
 }
 
 .btn {
-
-    cursor: pointer;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-.btn {
     padding: 10px 20px;
     font-size: 16px;
+    max-width: 800px;
     cursor: pointer;
-    background-color: #000; 
-    color: #20ff7f; 
-    border: 2px solid #20ff7f;
+    background-color: var(--bg-grey); 
+    color: var(--bg-green); 
+    border: 2px solid var(--bg-green);
     border-radius: 5px;
-    justify-content: center;
-
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #121212;
-    color: #e0e0e0; 
-    text-decoration: none;
-    border: 2px solid #e0e0e0; 
-    border-radius: 5px;
+    margin-top: 20px;
     text-align: center;
-
+    
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn:hover {
-
-    background-color: #20ff7f; 
-    color: #000;
+    background-color: var(--bg-green); 
+    color: var(--text-dark);
 }
 
 
@@ -646,7 +614,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.9); 
+    background-color: rgba(0, 0, 0, 0.5); 
     display: none;
     align-items: center;
     justify-content: center;
@@ -657,11 +625,11 @@ body {
     width: 60%;
     min-width: 450px;
     min-height: 200px;
-    background-color: #1a1a1a; 
-    color: #20ff7f; 
+    background-color: var(--bg-grey); 
+    color: var(--bg-green); 
     padding: 50px;
     border-radius: 20px;
-    border: 2px solid #20ff7f; 
+    border: 2px solid var(--bg-green); 
     box-shadow: 0 0 15px rgba(32, 255, 127, 0.5);
 }
 
@@ -673,9 +641,9 @@ body {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border: 2px solid #20ff7f; 
-    background-color: #1a1a1a; 
-    color: #20ff7f; 
+    border: 2px solid var(--bg-green); 
+    background-color: var(--bg-black); 
+    color: var(--bg-green); 
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -685,45 +653,12 @@ body {
 }
 
 .fechar:hover {
-    background-color: #20ff7f; 
-    color: #000;
+    background-color: var(--bg-green); 
+    color: var(--text-dark);
 }
 
 .janela-modal.abrir {
     display: flex;
-}
-
-.main-footer {
-    background-color: #1f1f1f;
-    padding: 20px;
-    text-align: center;
-    border-top: 3px solid #333; 
-}
-
-.main-footer p {
-    color: #e0e0e0;
-    margin: 0;
-}
-
-.main-footer nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-}
-
-.main-footer nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.main-footer nav ul li a {
-    text-decoration: none;
-    color: #e0e0e0;
-    font-size: 14px;
-}
-
-.main-footer nav ul li a:hover {
-    color: #bbb; 
 }
 
 
