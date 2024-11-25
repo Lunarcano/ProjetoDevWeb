@@ -482,4 +482,87 @@ nav ul li a:hover {
     color: var(--text-white);
 }
 
+.modal, .janela-modal {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 
+.btn {
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #000; 
+    color: #20ff7f; 
+    border: 2px solid #20ff7f;
+    border-radius: 5px;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #20ff7f; 
+    color: #000;
+}
+
+
+.janela-modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9); 
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal {
+    width: 60%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: #1a1a1a; 
+    color: #20ff7f; 
+    padding: 50px;
+    border-radius: 20px;
+    border: 2px solid #20ff7f; 
+    box-shadow: 0 0 15px rgba(32, 255, 127, 0.5);
+}
+
+
+.fechar {
+    position: absolute;
+    top: 15px; 
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #20ff7f; 
+    background-color: #1a1a1a; 
+    color: #20ff7f; 
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.fechar:hover {
+    background-color: #20ff7f; 
+    color: #000;
+}
+
+.janela-modal.abrir {
+    display: flex;
+}

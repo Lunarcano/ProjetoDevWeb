@@ -12,6 +12,18 @@ toggle_tema.addEventListener("click", () => {
   } else window.localStorage.setItem("tema", "light");
 });
 
+/* Função para Abrir o Modal da localização */
+function abrirModal(){
+  const modal = document.getElementById("janela-modal")
+  modal.classList.add("abrir")
+
+  modal.addEventListener("click", (e) => {
+      if(e.target.id === "fechar" || e.target.id === "janela-modal"){
+          modal.classList.remove("abrir")
+      }
+  })
+  
+}
 /* Função dos banners rotativos */
 let count = 1;
 document.getElementById("radio1").checked = true;
