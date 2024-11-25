@@ -197,6 +197,77 @@ button{
     box-shadow: 0 0 10px var(--text-green);
 }
 
+/* Estilo do Rodapé */
+.footer {
+    background-color: var(--bg-grey);
+    color: var(--bg-white);
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.footer-section h3 {
+    color: var(--text-green); /* Verde para títulos */
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    color: var(--text-white);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--text-purple); /* Roxo no hover */
+}
+
+.social-link {
+    display: inline-block;
+    color: var(--text-green); /* Verde para links de redes sociais */
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: var(--text-purple); /* Roxo no hover */
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid var(--text-green);
+    margin-top: 20px;
+    color: var(--text-white);
+}
+
+
 .noticias {
     max-width: 800px;
     margin: 0 auto;
@@ -215,6 +286,7 @@ button{
     margin-bottom: 20px;
     padding: 15px;
     background-color: var(--bg-black);
+    border-radius: 8px;
 }
 
 .noticia h3 {
@@ -285,9 +357,10 @@ header nav ul li a:hover {
 
 .review {
     background-color: var(--bg-black); /* Fundo mais escuro para cada review */
+    border: 1px solid var(--text-green); /* Borda verde */
+    border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    border-radius: 8px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -315,6 +388,15 @@ header nav ul li a:hover {
 
 .review a:hover {
     color: var(--text-purple); /* Roxo no hover do link */
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--bg-grey);
+    color: var(--text-white);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
 }
 
 header {
@@ -410,76 +492,158 @@ nav ul li a:hover {
     font-style: italic;
 }
 
-/* Estilo do Rodapé */
-.footer {
-    background-color: var(--bg-grey);
+/* Rodapé contato */
+footer {
+    background-color: var(--bg-black);
     color: var(--text-white);
     padding: 20px;
     text-align: center;
     margin-top: 40px;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+/*reviews*/
 
-.footer-section {
-    flex: 1;
-    margin: 0 10px;
-}
+/* Estilos gerais */
 
-.footer-section h3 {
-    color: var(--text-green); /* Verde para títulos */
-    margin-bottom: 10px;
-}
-
-.footer-section p,
-.footer-section ul {
-    color: var(--text-white);
-}
-
-.footer-section ul {
-    list-style: none;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; 
+    color: #e0e0e0; 
+    margin: 0;
     padding: 0;
 }
 
-.footer-section ul li {
-    margin-bottom: 8px;
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-bottom: 3px solid #333; 
 }
 
-.footer-section ul li a {
-    color: var(--text-white);
+.main-header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-header h1 {
+    font-size: 24px;
+    color: #e0e0e0; 
+}
+
+.main-header img {
+    width: 50px;
+}
+
+.main-header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+.main-header nav ul li a {
     text-decoration: none;
-    transition: color 0.3s;
+    color: #e0e0e0;
+    font-size: 16px;
+    transition: color 0.3s ease;
 }
 
-.footer-section ul li a:hover {
-    color: var(--text-purple); /* Roxo no hover */
+.main-header nav ul li a:hover {
+    color: #bbb; 
 }
 
-.social-link {
-    display: inline-block;
-    color: var(--text-green); /* Verde para links de redes sociais */
-    margin-right: 10px;
-    text-decoration: none;
-    transition: color 0.3s;
+
+.review-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(5, 251, 99, 0.2);
 }
 
-.social-link:hover {
-    color: var(--text-purple); /* Roxo no hover */
-}
-
-/* Rodapé Inferior */
-.footer-bottom {
+.review-header h1 {
+    font-size: 32px;
+    color: #e0e0e0; 
     text-align: center;
-    padding: 15px 0;
-    border-top: 1px solid var(--text-green);
-    margin-top: 20px;
-    color: var(--text-white);
 }
 
+.review-image {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+.review-body h2 {
+    font-size: 24px;
+    color: #e0e0e0; 
+    margin-bottom: 10px;
+}
+
+.review-body p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #121212;
+    color: #e0e0e0; 
+    text-decoration: none;
+    border: 2px solid #e0e0e0; 
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #333333; 
+    color: #fff; 
+}
+
+.main-footer {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #333; 
+}
+
+.main-footer p {
+    color: #e0e0e0;
+    margin: 0;
+}
+
+.main-footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.main-footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.main-footer nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+.main-footer nav ul li a:hover {
+    color: #bbb; 
+}
 
