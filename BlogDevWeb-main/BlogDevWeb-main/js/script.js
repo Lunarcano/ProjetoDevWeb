@@ -11,6 +11,7 @@ toggle_tema.addEventListener("click", () => {
     window.localStorage.setItem("tema", "dark");
   } else window.localStorage.setItem("tema", "light");
 });
+
 /* Função dos banners rotativos */
 let count = 1;
 document.getElementById("radio1").checked = true;
